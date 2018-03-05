@@ -117,8 +117,10 @@ function crupier() {
 
         }
 
-
+        console.log("WNTRA");
         if (!usuariotermina && sumIA >= 17) {
+            console.log("WNTRA2");
+
             if (sumIA <= 21) {
                 if (sumIA > sumUsuario && sumIA > sumUsuario2) {
                     console.log('IA GANA');
@@ -136,7 +138,11 @@ function crupier() {
         }
 
     } else {
+        console.log("WNTRA4");
+
         if (sumIA <= 21) {
+            console.log("WNTRA3");
+
             if (sumIA > sumUsuario && sumIA > sumUsuario2) {
                 console.log('IA GANA');
                 terminaUS();
@@ -305,7 +311,7 @@ function empezar() {
     //USUARIO
 
     if (archivo.cards[0].value == 'JACK' || archivo.cards[0].value == 'QUEEN' || archivo.cards[0].value == 'KING' || archivo.cards[0].value == 'ACE') {
-        usuario.push(10);
+        usuario.push(archivo.cards[0].images.png);
         ponercarta(archivo.cards[0].images.png, usuarioleft, usuariotop);
         usuarioleft = usuarioleft + 130;
         sumUsuario += parseInt(10);
@@ -313,7 +319,7 @@ function empezar() {
         primero = archivo.cards[0].value;
 
     } else {
-        usuario.push(archivo.cards[0].value);
+        usuario.push(archivo.cards[0].images.png);
         ponercarta(archivo.cards[0].images.png, usuarioleft, usuariotop);
         usuarioleft = usuarioleft + 130;
         sumUsuario += parseInt(archivo.cards[0].value);
@@ -326,7 +332,7 @@ function empezar() {
 
 
     if (archivo.cards[1].value == 'JACK' || archivo.cards[1].value == 'QUEEN' || archivo.cards[1].value == 'KING' || archivo.cards[1].value == 'ACE') {
-        usuario.push(10);
+        usuario.push(archivo.cards[1].images.png);
         ponercarta(archivo.cards[1].images.png, usuarioleft, usuariotop);
         usuarioleft = usuarioleft + 130;
         sumUsuario += parseInt(10);
@@ -334,7 +340,7 @@ function empezar() {
         segundo = archivo.cards[1].value;
 
     } else {
-        usuario.push(archivo.cards[1].value);
+        usuario.push(archivo.cards[1].images.png);
         ponercarta(archivo.cards[1].images.png, usuarioleft, usuariotop);
         usuarioleft = usuarioleft + 130;
         sumUsuario += parseInt(archivo.cards[1].value);
@@ -355,7 +361,7 @@ function empezar() {
 //IA
     if (archivo.cards[0].value == 'JACK' || archivo.cards[0].value == 'QUEEN' || archivo.cards[0].value == 'KING' || archivo.cards[0].value == 'ACE') {
         ponercarta(archivo.cards[0].images.png, ialeft, iatop);
-        ordena.push(10);
+        ordena.push(archivo.cards[0].images.png);
         ialeft = ialeft + 130;
         sumIA += parseInt(10);
     } else {
@@ -392,37 +398,84 @@ function crearfichas() {
 
 
 function seleccionarfichas(e) {
-
     if (e.target.id == '0') {//1
 
         if (contadorDinero >= 1) {
             contadorDinero = contadorDinero - 1;
-
+            ficha = document.createElement('img');
+            ficha.style.width = 75 + 'px';
+            ficha.style.height = 75 + 'px';
+            ficha.style.top = fichastop + 'px';
+            ficha.style.position = 'absolute';
+            ficha.src = "1.png";
+            document.body.appendChild(ficha);
+            fichastop = fichastop + 100;
         }
 
     } else if (e.target.id == '1') {//5
         if (contadorDinero >= 5) {
             contadorDinero = contadorDinero - 5;
+            ficha = document.createElement('img');
+            ficha.style.width = 75 + 'px';
+            ficha.style.height = 75 + 'px';
+            ficha.style.top = fichastop + 'px';
+            ficha.style.position = 'absolute';
+            ficha.src = "2.png";
+            document.body.appendChild(ficha);
+            fichastop = fichastop + 100;
 
         }
     } else if (e.target.id == '2') {//10
         if (contadorDinero >= 10) {
             contadorDinero = contadorDinero - 10;
+            ficha = document.createElement('img');
+            ficha.style.width = 75 + 'px';
+            ficha.style.height = 75 + 'px';
+            ficha.style.top = fichastop + 'px';
+            ficha.style.position = 'absolute';
+            ficha.src = "10.png";
+            document.body.appendChild(ficha);
+            fichastop = fichastop + 100;
 
         }
     } else if (e.target.id == '3') {//20
         if (contadorDinero >= 20) {
             contadorDinero = contadorDinero - 20;
+            ficha = document.createElement('img');
+            ficha.style.width = 75 + 'px';
+            ficha.style.height = 75 + 'px';
+            ficha.style.top = fichastop + 'px';
+            ficha.style.position = 'absolute';
+            ficha.src = "20.png";
+            document.body.appendChild(ficha);
+            fichastop = fichastop + 100;
 
         }
     } else if (e.target.id == '4') {//50
         if (contadorDinero >= 50) {
             contadorDinero = contadorDinero - 50;
+            ficha = document.createElement('img');
+            ficha.style.width = 75 + 'px';
+            ficha.style.height = 75 + 'px';
+            ficha.style.top = fichastop + 'px';
+            ficha.style.position = 'absolute';
+            ficha.src = "50.png";
+            document.body.appendChild(ficha);
+            fichastop = fichastop + 100;
 
         }
     } else if (e.target.id == '5') {//100
         if (contadorDinero >= 100) {
             contadorDinero = contadorDinero - 100;
+            ficha = document.createElement('img');
+            ficha.style.width = 75 + 'px';
+            ficha.style.height = 75 + 'px';
+            ficha.style.top = fichastop + 'px';
+            ficha.style.position = 'absolute';
+            ficha.src = "100.png";
+            document.body.appendChild(ficha);
+            fichastop = fichastop + 100;
+
 
         }
     } else if (e.target.id == 'empezar') {
@@ -434,11 +487,8 @@ function seleccionarfichas(e) {
             btempezar.style.display = 'none';
             url = "https://deckofcardsapi.com/api/deck/" + id + "/draw/?count=2";
             peticion(url);
-
             empezar();
         }
-
-
     }
     dinero.innerHTML = contadorDinero;
 
@@ -449,9 +499,10 @@ function seleccionarfichas(e) {
 ;
 
 function juego() {
+
     id = archivo.deck_id;
     ordena = new Array();
-    usuario = new Array
+    usuario = new Array();
     dinero.innerHTML = contadorDinero;
     crearfichas();
 
@@ -462,11 +513,15 @@ function terminaUS() {
     cLost.style.visibility = 'visible';
     invisible();
 
+
 }
 ;
 function terminaIA() {
     cWin.style.visibility = 'visible';
+    var num = (100 - contadorDinero);
+    dinero.innerHTML = contadorDinero + num;
     invisible();
+
 
 }
 ;
@@ -492,6 +547,7 @@ window.onload = function () {
     k = 0;
     primero = 0;
     segundo = 0;
+    fichastop = 10;
 
 
 
@@ -510,17 +566,22 @@ window.onload = function () {
     btempezar = document.getElementById('empezar');
     btempezar.style.backgroundImage = "url('Empezar.jpg')";
     btempezar.style.left = (window.innerWidth / 2) - 175 + 'px';
+    btempezar.style.top = (window.innerHeight) - 75 + 'px';
+
 
 
 
 
     //FONDO
+        img = document.getElementById('img');
 
-    img = document.getElementById('img');
+/*
     //img.style.backgroundImage = "url('https://i.pinimg.com/originals/a5/a2/a7/a5a2a713c08809de17fd6b0d489d3e1e.jpg')";
     img.style.backgroundImage = "url('https://images-na.ssl-images-amazon.com/images/I/91POcDrLZdL._SL1500_.jpg')";
     img.style.width = window.innerWidth + 'px';
     img.style.height = window.innerHeight + 'px';
+*/
+    img.style.opacity = 0.8;
 
     //BOTONES
 

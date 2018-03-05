@@ -4,18 +4,22 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 
+body{
+    background-image: url('https://images-na.ssl-images-amazon.com/images/I/91POcDrLZdL._SL1500_.jpg');
+    background-size:100%;
+
+}
 
 #contenedor{
     z-index:-99;
     position: relative;
+    opacity: 0.8; 
 
 }
 #img{
-
-
-    opacity: 0.8; 
-    background-size:contain;
     z-index: -99;
+    background-size:contain;
+    opacity: 0.8; 
 
 
 }
@@ -36,7 +40,6 @@ and open the template in the editor.
 #empezar{
     width: 288px;
     height: 49px;
-    top: 530px;
     z-index: 1;
     position: absolute;
     border-radius: 15px;
