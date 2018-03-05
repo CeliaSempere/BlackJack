@@ -54,7 +54,7 @@ function ponercarta(urlfoto, left, top) {
 
     foto = document.createElement('img');
     foto.style.width = 100 + 'px';
-    foto.style.height = 200 + 'px';
+    foto.style.height = 175 + 'px';
     foto.style.top = top + 'px';
     foto.style.left = left + 'px';
     foto.style.position = 'absolute';
